@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="container">
+        <header>
+            <h1><span>hedge</span>hog</h1>
+        </header>
+        <nav>
+            <ul>
+                {% for item in menu_items %}
+                    <li><a href="{% url item.name %}">{{ item.display_name }}</a>
+                {% endfor %}
+            </ul>
+        </nav>
+        <article>
+            {% block page_content %}{% endblock %}
+        </article>
+        <aside>
+            {% for item in stat_items %}
+                {{ item.display_name }}:
+                <div class="meter">
+                    <span id="{{ item.name }}"></span>
+                </div>
+            {% endfor %}
+        </aside>
+        <footer>
+            <h6>Powered by Raspberry PI</h6>
+        </footer>
+    </div>
+{% endblock %}

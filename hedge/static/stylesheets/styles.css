@@ -1,0 +1,123 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+#container {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    min-width: 700px;
+    min-height: 630px;
+}
+
+#container header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+#container footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
+
+#container nav {
+    position: absolute;
+    top: 100px;
+    bottom: 200px;
+    width: 200px;
+}
+
+#container article {
+    position: absolute;
+    bottom: 200px;
+    top: 100px;
+    left: 200px;
+    right: 300px;
+}
+
+#container aside {
+    position: absolute;
+    top: 100px;
+    bottom: 200px;
+    width: 300px;
+    right: 0;
+    line-height: 40px;
+}
+
+#container aside meter {
+    width: 100%;
+}
+
+#container header h1 {
+    position: absolute;
+    margin: 0;
+    font-family: Consolas;
+    font-size: 80px;
+    right: 100px;
+    font-weight: bold;
+}
+
+#container header h1 span {
+    color: black;
+    text-shadow: 1px 1px 5px white;
+}
+
+#container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#container nav ul li {
+    border-bottom: 3px solid;
+}
+
+#container nav ul li:first-child {
+    border-top: 3px solid;
+}
+
+#container nav a {
+    font-family: Arial;
+    line-height: 70px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+#container nav a:hover {
+    background-color: silver;
+    font-weight: bold;
+}
+
+#container footer h6 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+}
+
+.meter {
+    height: 10px;
+    border: 1px solid;
+    padding: 3px;
+    margin-right: 30px;
+}
+
+.meter > span {
+    display: block;
+    background-color: white;
+    height: 100%;
+    width: 0;
+    transition: width 2s;
+    -webkit-transition: width 2s;
+}
