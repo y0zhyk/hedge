@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "stylesheets/hedgehog.css" %}"/>
+{% endblock stylesheets %}
 {% block content %}
     <div id="container">
         <header>
@@ -26,4 +31,4 @@
             <h6>Powered by Raspberry PI</h6>
         </footer>
     </div>
-{% endblock %}
+{% endblock content %}

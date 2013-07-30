@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import TemplateView, RedirectView, FormView
+from .forms import LoginForm
 
 
 class HedgehogBaseView(object):
@@ -31,3 +32,9 @@ class TorrentView(RedirectView):
     """D-Link page view"""
     url = "http://hedgehog.no-ip.info:9091"
 
+
+class LoginView(HedgehogBaseView, FormView):
+    """D-Link page view"""
+    template_name = 'login.html'
+    form_class = LoginForm
+    success_url = '/'

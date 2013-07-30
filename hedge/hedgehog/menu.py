@@ -1,4 +1,4 @@
-from .views import HomeView, AboutView, DLinkView, TorrentView
+from .views import HomeView, AboutView, DLinkView, TorrentView, LoginView
 
 
 class MenuItem(object):
@@ -31,9 +31,11 @@ class Menu(list):
         super(Menu, self).__init__()
         self.extend(items)
 
+
 menu = Menu(
     [
         MenuItem(name='home',    display_name='Home',    view=HomeView),
+        MenuItem(name='login',   display_name='Login',   view=LoginView),
         MenuItem(name='d_link',  display_name='D-Link',  view=DLinkView),
         MenuItem(name='torrent', display_name="Torrent", view=TorrentView),
         MenuItem(name='about',   display_name="About",   view=AboutView),

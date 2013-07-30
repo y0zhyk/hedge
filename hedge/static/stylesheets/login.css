@@ -1,0 +1,24 @@
+#login_form{
+    position: relative;
+    top: 30px;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+#login_form label {
+    position: relative;
+    left: 30px;
+}
+
+#login_form input {
+    position: absolute;
+    right: 30px;
+    width: 170px;
+}
+
+#login_form #login_button {
+    width: 100px;
+    bottom: 30px;
+}
