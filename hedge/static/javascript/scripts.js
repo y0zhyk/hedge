@@ -8,6 +8,7 @@ function startMonitoringStats() {
         $('#mem').width(data.mem + "%");
         $('#swap').width(data.swap + "%");
         $('#disk').width(data.disk + "%");
+        $('#temp').width(data.temp + "%");
     });
 
     setTimeout(function () {
