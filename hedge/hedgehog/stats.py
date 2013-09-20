@@ -26,7 +26,8 @@ stats = Stats(
         StatItem(name='cpu',  display_name='CPU usage'),
         StatItem(name='mem',  display_name='Memory usage'),
         StatItem(name='swap', display_name='Swap usage'),
-        StatItem(name='disk', display_name='Disk usage')
+        StatItem(name='disk', display_name='Disk usage'),
+        StatItem(name='temp', display_name='CPU temperature')
     ]
 )
 

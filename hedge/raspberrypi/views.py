@@ -1,15 +1,17 @@
 import json
-import random
 from django.http import HttpResponse
-import psutil
+from . import system_utils
 
 
 def stats(request):
+
     some_data = {
-        'cpu':  psutil.cpu_percent(),
-        'mem':  psutil.virtual_memory().percent,
-        'swap': psutil.swap_memory().percent,
-        'disk': psutil.disk_usage('/').percent
+        'cpu':  system_utils.cpu_usage(),
+        'mem':  system_utils.memory_usage(),
+        'swap': system_utils.swap_usage(),
+        'disk': system_utils.disk_usage(),
+        'temp': system_utils.cpu_temperature()
     }
+
     data = json.dumps(some_data)
     return HttpResponse(data, mimetype='application/json')
