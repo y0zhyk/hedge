@@ -54,7 +54,7 @@ def disk_usage():
 
         usage = psutil.disk_usage('/')
         percent = usage.percent
-        value = "{}GB/{}GB".format(usage.used/1073741824, usage.total/1073741824)
+        value = "{:.1f}GB/{:.1f}GB".format(usage.used/1073741824., usage.total/1073741824.)
     except ImportError:
         pass
     return percent, value
