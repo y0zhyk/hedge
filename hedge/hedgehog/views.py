@@ -8,8 +8,6 @@ class HedgehogBaseView(object):
         context = super(HedgehogBaseView, self).get_context_data(**kwargs)
         from .menu import menu
         context['menu_items'] = menu
-        from .stats import stats
-        context['stat_items'] = stats
         return context
 
 
