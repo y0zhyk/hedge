@@ -17,19 +17,19 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 
 #container nav {
     position: absolute;
     top: 100px;
-    bottom: 200px;
+    bottom: 150px;
     width: 200px;
 }
 
 #container article {
     position: absolute;
-    bottom: 200px;
+    bottom: 150px;
     top: 100px;
     left: 200px;
     right: 300px;
@@ -38,7 +38,7 @@
 #container aside {
     position: absolute;
     top: 100px;
-    bottom: 200px;
+    bottom: 150px;
     width: 300px;
     right: 0;
     line-height: 40px;
@@ -53,7 +53,7 @@
     margin: 0;
     font-family: Consolas;
     font-size: 80px;
-    right: 100px;
+    right: 50px;
     font-weight: bold;
 }
 
