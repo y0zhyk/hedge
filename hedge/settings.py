@@ -1,6 +1,5 @@
 # Django settings for hedge project.
 import os
-from sys import path
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

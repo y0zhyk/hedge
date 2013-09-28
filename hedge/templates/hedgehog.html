@@ -20,12 +20,7 @@
             {% block page_content %}{% endblock %}
         </article>
         <aside>
-            {% for item in stat_items %}
-                {{ item.display_name }}:
-                <div class="meter">
-                    <span id="{{ item.name }}"></span>
-                </div>
-            {% endfor %}
+
         </aside>
         <footer>
             <h6>Powered by Raspberry PI</h6>
