@@ -13,10 +13,10 @@
       _ref = data.stats;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         stat = _ref[_i];
-        $('aside').append("" + stat.description + ":<span align='right'>" + stat.value + "</span>");
-        $('aside').append("<div class='meter'><span id=" + stat.id + "></span></div>");
+        $("aside").append("" + stat.description + ":<swap class=value id=" + stat.id + "_value>" + stat.value + "</swap>");
+        $("aside").append("<div class=meter><span id=" + stat.id + "_percent></span></div>");
       }
-      return $('aside').append("<p>Updated: <span id='time'>" + data.time + "</span>");
+      return $("aside").append("<p>Updated: <span id=time>" + data.time + "</span>");
     });
   };
 
@@ -26,7 +26,8 @@
       _ref = data.stats;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         stat = _ref[_i];
-        $("#" + stat.id).width("" + stat.percent + "%");
+        $("#" + stat.id + "_value").text(stat.value);
+        $("#" + stat.id + "_percent").width("" + stat.percent + "%");
       }
       return $("#time").text(data.time);
     });

@@ -5,13 +5,14 @@ $(document).ready ->
 showStats = () ->
   $.getJSON 'api/stats', (data) ->
     for stat in data.stats
-      $('aside').append "#{stat.description}:<span align='right'>#{stat.value}</span>"
-      $('aside').append "<div class='meter'><span id=#{stat.id}></span></div>"
-    $('aside').append "<p>Updated: <span id='time'>#{data.time}</span>"
+      $("aside").append "#{stat.description}:<swap class=value id=#{stat.id}_value>#{stat.value}</swap>"
+      $("aside").append "<div class=meter><span id=#{stat.id}_percent></span></div>"
+    $("aside").append "<p>Updated: <span id=time>#{data.time}</span>"
 
 updateStats = () ->
   $.getJSON 'api/stats', (data) ->
     for stat in data.stats
-      $("##{stat.id}").width "#{stat.percent}%"
+      $("##{stat.id}_value").text stat.value
+      $("##{stat.id}_percent").width "#{stat.percent}%"
     $("#time").text data.time
   setTimeout updateStats, 10000

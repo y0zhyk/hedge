@@ -115,3 +115,8 @@
     transition: width 2s;
     -webkit-transition: width 2s;
 }
+
+.value {
+    float: right;
+    margin-right: 30px;
+}
