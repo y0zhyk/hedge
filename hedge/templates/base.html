@@ -6,8 +6,8 @@
     {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{% static "stylesheets/base.css" %}"/>
     {% endblock stylesheets %}
-    <script src="{% static "javascript/jquery-1.10.2.min.js" %}"></script>
-    <script src="{% static "javascript/scripts.js" %}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{% static "javascript/stats.js" %}"></script>
 </head>
-<body>{% block content %}{% endblock content%}</body>
+<body onload="showStats()">{% block content %}{% endblock content%}</body>
 </html>
