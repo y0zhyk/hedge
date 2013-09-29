@@ -14,7 +14,8 @@
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         stat = _ref[_i];
         $("aside").append("" + stat.description + ":<swap class=value id=" + stat.id + "_value>" + stat.value + "</swap>");
-        $("aside").append("<div class=meter><span id=" + stat.id + "_percent width=\"" + stat.percent + "%\"></span></div>");
+        $("aside").append("<div class=meter><span id=" + stat.id + "_percent/></div>");
+        $("#" + stat.id + "_percent").width("" + stat.percent + "%");
       }
       return $("aside").append("<p>Updated: <span id=time>" + data.time + "</span>");
     });
