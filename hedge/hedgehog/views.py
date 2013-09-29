@@ -8,6 +8,8 @@ class HedgehogBaseView(object):
         context = super(HedgehogBaseView, self).get_context_data(**kwargs)
         from .menu import menu
         context['menu_items'] = menu
+        from .footer import logos
+        context['logos'] = logos
         return context
 
 
