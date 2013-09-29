@@ -21,9 +21,11 @@
         </article>
         <aside></aside>
         <footer>
-            <img style="float: right;" src="{% static "images/debian_logo.png" %}">
-            <img style="float: right;" src="{% static "images/raspberrypi_logo.png" %}">
-            <img style="float: right;" src="{% static "images/python_logo.png" %}">
+            <div id="powered_by">
+                {% for logo in logos %}
+                    <a href="{{ logo.url }}"><img src="{% static logo.image %}"/></a>
+                {% endfor %}
+            </div>
             <h6>&copy 2013 Yozhyk</h6>
         </footer>
     </div>
