@@ -6,8 +6,8 @@ showStats = () ->
   $.getJSON 'api/stats', (data) ->
     for stat in data.stats
       $("aside").append "#{stat.description}:<swap class=value id=#{stat.id}_value>#{stat.value}</swap>"
-      $("aside").append "<div class=meter><span id=#{stat.id}_percent width=#{stat.percent}%></span></div>"
-    $("aside").append "<p>Updated: <span id=time>#{stat.tile}</span>"
+      $("aside").append """<div class=meter><span id=#{stat.id}_percent width="#{stat.percent}%"></span></div>"""
+    $("aside").append "<p>Updated: <span id=time>#{data.time}</span>"
 
 updateStats = () ->
   $.getJSON 'api/stats', (data) ->
