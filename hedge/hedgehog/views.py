@@ -23,18 +23,13 @@ class AboutView(HedgehogBaseView, TemplateView):
     template_name = 'about.html'
 
 
-class DLinkView(RedirectView):
-    """D-Link page view"""
-    url = "http://hedgehog.no-ip.info"
-
-
 class TorrentView(RedirectView):
-    """D-Link page view"""
+    """Torrent page view"""
     url = "http://hedgehog.no-ip.info:9091"
 
 
 class LoginView(HedgehogBaseView, FormView):
-    """D-Link page view"""
+    """Login page view"""
     template_name = 'login.html'
     form_class = LoginForm
     success_url = '/'
