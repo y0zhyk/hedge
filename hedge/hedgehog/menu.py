@@ -1,4 +1,4 @@
-from .views import HomeView, AboutView, DLinkView, TorrentView, LoginView
+from .views import HomeView, AboutView, TorrentView, LoginView
 
 
 class MenuItem(object):
