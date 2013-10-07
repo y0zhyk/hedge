@@ -25,7 +25,7 @@ class AboutView(HedgehogBaseView, TemplateView):
 
 class TorrentView(RedirectView):
     """Torrent page view"""
-    url = "http://hedgehog.no-ip.info:9091"
+    url = "http://hedgehog.no-ip.info/transmission/web"
 
 
 class LoginView(HedgehogBaseView, FormView):

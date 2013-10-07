@@ -18,7 +18,7 @@ def cpu_usage():
 def memory_usage():
     """Retrieves information about memory usage"""
     percent = 0
-    value = ""
+    value = "0B"
     try:
         import psutil
 
@@ -33,7 +33,7 @@ def memory_usage():
 def swap_usage():
     """Retrieves information about swap memory usage"""
     percent = 0
-    value = ""
+    value = "0B"
     try:
         import psutil
 
@@ -48,7 +48,7 @@ def swap_usage():
 def disk_usage():
     """Retrieves information about swap disk usage"""
     percent = 0
-    value = ""
+    value = "0B"
     try:
         import psutil
 
