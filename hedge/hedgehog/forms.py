@@ -12,8 +12,8 @@ class LoginForm(forms.Form):
 
     def is_valid(self):
         """Verifies user credentials"""
-        if self.data['username'] != 'user':
+        try:
+            import pam
+            return pam.authenticate(self.data['username'], self.data['password'])
+        except ImportError:
             return False
-        if self.data['password'] != 'password':
-            return False
-        return True
