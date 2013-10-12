@@ -1,4 +1,4 @@
-#login_form{
+#login_form {
     position: relative;
     top: 30px;
     width: 350px;
@@ -12,6 +12,16 @@
     left: 30px;
 }
 
+#login_form div.error {
+    line-height: 40px;
+    margin: 10px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
 #login_form input {
     position: absolute;
     right: 30px;
@@ -20,5 +30,5 @@
 
 #login_form #login_button {
     width: 100px;
-    bottom: 30px;
+    bottom: 20px;
 }

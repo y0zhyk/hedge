@@ -8,7 +8,10 @@
 {% block page_content %}
     <form id="login_form" action="" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="error">{{ form.non_field_errors }}</div>
+        {% for field in form %}
+            <p>{{ field.label_tag }}{{ field }}
+        {% endfor %}
         <input id="login_button" type="submit" value="Login"/>
     </form>
 {% endblock page_content %}
