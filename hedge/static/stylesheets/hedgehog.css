@@ -96,6 +96,7 @@
 }
 
 #container footer #powered_by img {
+    border-style: none;
     float: right;
 }
 
