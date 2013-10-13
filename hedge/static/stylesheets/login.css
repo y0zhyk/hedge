@@ -35,6 +35,14 @@
 }
 
 #login_form #login_button {
+    height: 30px;
     width: 100px;
     bottom: 20px;
+    background-color: black;
+    color: white;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid white;
+    border-radius: 0;
 }
+    
