@@ -14,3 +14,6 @@ updateStats = () ->
       $("##{stat.id}_percent").width "#{stat.percent}%"
     $("#time").text data.time
     setTimeout updateStats, 10000
+
+hideErrorMessage = () ->
+  $("div.error").fadeIn().delay(5000).fadeOut()

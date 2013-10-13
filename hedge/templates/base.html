@@ -10,5 +10,5 @@
     <script src="{% static "javascript/stats.js" %}"></script>
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 </head>
-<body onload="showStats()">{% block content %}{% endblock content%}</body>
+<body onload="showStats();hideErrorMessage();">{% block content %}{% endblock content%}</body>
 </html>

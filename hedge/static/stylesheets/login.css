@@ -7,11 +7,6 @@
     border: 1px solid;
 }
 
-#login_form label {
-    position: relative;
-    left: 30px;
-}
-
 #login_form div.error {
     line-height: 40px;
     margin: 10px;
@@ -20,6 +15,17 @@
     background-color: red;
     color: white;
     font-weight: bold;
+}
+
+#login_form div.credentials {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+}
+
+#login_form label {
+    position: relative;
+    left: 30px;
 }
 
 #login_form input {
