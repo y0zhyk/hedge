@@ -5,6 +5,10 @@
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "stylesheets/login.css" %}"/>
 {% endblock stylesheets %}
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static "javascript/login.js" %}"></script>
+{% endblock scripts %}
 {% block page_content %}
     <form id="login_form" action="" method="post">
         {% csrf_token %}
