@@ -1,5 +1,3 @@
-
-
 class LogoItem():
     def __init__(self, image, url):
         self.__image = image
@@ -22,8 +20,8 @@ class Logos(list):
 
 logos = Logos(
     [
-        LogoItem(image="debian_logo.png", url="www.raspbian.org"),
+        LogoItem(image="debian_logo.png",      url="www.raspbian.org"),
         LogoItem(image="raspberrypi_logo.png", url="www.raspberrypi.org"),
-        LogoItem(image="python_logo.png", url="www.python.org")
+        LogoItem(image="python_logo.png",      url="www.python.org")
     ]
 )
