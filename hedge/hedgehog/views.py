@@ -33,3 +33,8 @@ class LoginView(HedgehogBaseView, FormView):
     template_name = 'login.html'
     form_class = LoginForm
     success_url = '/'
+
+
+class NewView(RedirectView):
+    """New version of side"""
+    url = "/new"

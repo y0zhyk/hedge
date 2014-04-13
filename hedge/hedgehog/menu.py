@@ -1,4 +1,4 @@
-from .views import HomeView, AboutView, TorrentView, LoginView
+from .views import HomeView, AboutView, TorrentView, LoginView, NewView
 
 
 class MenuItem(object):
@@ -38,6 +38,7 @@ menu = Menu(
         MenuItem(name='login',   display_name='Login',   view=LoginView),
         MenuItem(name='torrent', display_name="Torrent", view=TorrentView),
         MenuItem(name='about',   display_name="About",   view=AboutView),
+        MenuItem(name='new',     display_name="New!",    view=NewView),
     ]
 )
 
