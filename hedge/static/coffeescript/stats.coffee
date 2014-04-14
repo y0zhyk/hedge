@@ -4,7 +4,7 @@ $(document).ready ->
 showStats = () ->
   $.getJSON 'api/stats', (data) ->
     for stat in data.stats
-      $("aside").append "<div>#{stat.description}:<swap class=value id=#{stat.id}_value>#{stat.value}</swap></div>"
+      $("aside").append "<div>#{stat.description}:<span class=value id=#{stat.id}_value>#{stat.value}</span></div>"
       $("aside").append "<div class=meter><span id=#{stat.id}_percent/></div>"
       $("##{stat.id}_percent").width "#{stat.percent}%"
     $("aside").append "<p>Updated: <span id=time>#{data.time}</span>"
