@@ -24,7 +24,8 @@ def memory_usage():
 
         usage = psutil.virtual_memory()
         percent = usage.percent
-        value = "{}MB/{}MB".format(usage.used/1048576, usage.total/1048576)
+        
+        value = "{}MB/{}MB".format((usage.total - usage.available)/1048576, usage.total/1048576)
     except ImportError:
         pass
     return percent, value
