@@ -15,5 +15,5 @@ func main() {
 	// static resources
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
 
-	http.ListenAndServe(":8082", nil)
+	http.ListenAndServe(":9090", nil)
 }
