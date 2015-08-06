@@ -1,3 +1,17 @@
 {% extends "hedgehog.html" %}
 {% block title %}Home{% endblock %}
-{% block page_content %}<h1 style="text-align: center">Home</h1>{% endblock %}
+{% load static %}
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "stylesheets/tiles.css" %}"/>
+{% endblock stylesheets %}
+{% block page_content %}
+<div id="tiles">
+{% for tile in tiles %}
+    <a class="tile">
+        <span>Router</span>
+        <img src="{% static "images/python_logo.png" %}">
+    </a>
+{% endfor %}
+</div>
+{% endblock %}

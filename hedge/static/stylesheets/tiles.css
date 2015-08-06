@@ -1,0 +1,41 @@
+.tile {
+    float: left;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em;
+    background: green;
+    width: 15em;
+    height: 8em;
+
+    color: white;
+}
+
+.width2 { width: 32em; }
+.width3 { width: 49em; }
+.width4 { width: 66em; }
+.height2 { height: 18em; }
+.height3 { height: 28em; }
+.height4 { height: 38em; }
+
+a.tile {
+    cursor: pointer;
+}
+
+a.tile:hover {
+    opacity: 0.85;
+}
+
+.tile span {
+    position: absolute;
+    left: 0.5em;
+    bottom: 0.5em;
+    font-size: 1em;
+}
+
+.tile img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -64px;
+    margin-top: -64px;
+}
