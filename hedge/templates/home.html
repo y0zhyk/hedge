@@ -6,12 +6,10 @@
     <link rel="stylesheet" type="text/css" href="{% static "stylesheets/tiles.css" %}"/>
 {% endblock stylesheets %}
 {% block page_content %}
-<div id="tiles">
-{% for tile in tiles %}
-    <a class="tile">
-        <span>Router</span>
-        <img src="{% static "images/python_logo.png" %}">
-    </a>
-{% endfor %}
-</div>
+    <div id="tiles">
+        <a class="tile" href="/torrent">
+            <span>Torrent</span>
+            <img src="{% static "images/torrent_icon.png" %}">
+        </a>
+    </div>
 {% endblock %}
