@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/base.css"/>
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/tiles.css"/>
+</head>
+<body>
+<div id="tiles">
+    {% for tile in tiles %}
+    {{tile|safe}}
+    {% endfor %}
+</div>
+</body>
+</html>
