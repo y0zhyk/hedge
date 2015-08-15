@@ -1,7 +1,7 @@
 from string import Template
 
 
-class Tile:
+class Tile(object):
     def __init__(self, width, height, clickable):
         self.__width = width
         self.__height = height
@@ -41,7 +41,7 @@ class Tile:
 
 class IconTile(Tile):
     def __init__(self, name, icon):
-        super().__init__(1, 1, True)
+        super(IconTile, self).__init__(1, 1, True)
         self.__name = name
         self.__icon = icon
 
@@ -54,7 +54,7 @@ class IconTile(Tile):
         return "static/images/{}".format(self.__icon)
 
     def _class(self):
-        return super()._class() + " icon"
+        return super(IconTile, self)._class() + " icon"
 
     def _content(self):
         template = '<span>$name</span><img src="$icon">'
@@ -63,10 +63,10 @@ class IconTile(Tile):
 
 class StatsTile(Tile):
     def __init__(self):
-        super().__init__(1, 2, False)
+        super(StatsTile, self).__init__(1, 2, False)
 
     def _class(self):
-        return super()._class() + " stats"
+        return super(StatsTile, self)._class() + " stats"
 
     def _content(self):
         return '<div>CPU usage:<span class=value id=cpu_value>0.0%</span></div>'+ \
@@ -83,7 +83,7 @@ class StatsTile(Tile):
 
 class Tiles(list):
     def __init__(self, items):
-        super().__init__()
+        super(Tiles, self).__init__()
         self.extend(items)
 
 
